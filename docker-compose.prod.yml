@@ -1,0 +1,81 @@
+# TeslaMate Production Docker Compose avec Dashboards Français
+# Compatible EasyPanel
+#
+# INSTRUCTIONS:
+# 1. Copier .env.example vers .env
+# 2. Modifier les valeurs dans .env
+# 3. Lancer: docker compose -f docker-compose.prod.yml up -d
+#
+# NOTE: Les alias réseau suivent le format EasyPanel: {projet}_{app}_{service}
+# Exemple: others_tesla_database (projet=others, app=tesla, service=database)
+
+services:
+  teslamate:
+    image: teslamate/teslamate:latest
+    restart: always
+    environment:
+      - ENCRYPTION_KEY=${ENCRYPTION_KEY}
+      - DATABASE_USER=${DATABASE_USER}
+      - DATABASE_PASS=${DATABASE_PASS}
+      - DATABASE_NAME=${DATABASE_NAME}
+      - DATABASE_HOST=database
+      - MQTT_HOST=mosquitto
+    volumes:
+      - ./import:/opt/app/import
+    depends_on:
+      - database
+      - mosquitto
+    networks:
+      default:
+        aliases:
+          - others_tesla_teslamate
+
+  database:
+    image: postgres:17
+    restart: always
+    environment:
+      - POSTGRES_USER=${DATABASE_USER}
+      - POSTGRES_PASSWORD=${DATABASE_PASS}
+      - POSTGRES_DB=${DATABASE_NAME}
+    volumes:
+      - teslamate-db-v3:/var/lib/postgresql/data
+    networks:
+      default:
+        aliases:
+          - others_tesla_database
+
+  mosquitto:
+    image: eclipse-mosquitto:2
+    restart: always
+    command: mosquitto -c /mosquitto-no-auth.conf
+    volumes:
+      - mosquitto-conf:/mosquitto/config
+      - mosquitto-data:/mosquitto/data
+    networks:
+      default:
+        aliases:
+          - others_tesla_mosquitto
+
+  grafana:
+    # Image personnalisee avec dashboards francais
+    image: ghcr.io/unixsafe/teslamate/grafana:latest
+    restart: always
+    environment:
+      - DATABASE_USER=${DATABASE_USER}
+      - DATABASE_PASS=${DATABASE_PASS}
+      - DATABASE_NAME=${DATABASE_NAME}
+      - DATABASE_HOST=database
+    volumes:
+      - teslamate-grafana-data:/var/lib/grafana
+    depends_on:
+      - database
+    networks:
+      default:
+        aliases:
+          - others_tesla_grafana
+
+volumes:
+  teslamate-db-v3:
+  teslamate-grafana-data:
+  mosquitto-conf:
+  mosquitto-data:
