@@ -20,4 +20,12 @@ extend-glob = ["*.po"]
 check-file = false
 
 [files]
-extend-exclude = ["*.json.example"]
+extend-exclude = [
+    "*.json.example",
+    # French translated dashboards
+    "grafana/dashboards/fr/*.json",
+    "grafana/dashboards/internal/fr/*.json",
+    "grafana/dashboards/reports/fr/*.json",
+    # Production docker-compose with French comments
+    "docker-compose.prod.yml",
+]
