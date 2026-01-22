@@ -25,7 +25,7 @@
       "targetBlank": true,
       "title": "Sélectionner les trois derniers trajets",
       "type": "link",
-      "url": "/d/FkUpJpQZk/trip?from=$from"
+      "url": "/d/FkUpJpQZk-fr/trip?from=$from"
     },
     {
       "icon": "dashboard",
@@ -1545,7 +1545,7 @@
                   {
                     "targetBlank": false,
                     "title": "Voir les détails du trajet",
-                    "url": "/d/zm7wN6Zgz/drive-details?from=${__data.fields.start_date_ts.numeric}&to=${__data.fields.end_date_ts.numeric}&var-car_id=${__data.fields.car_id.numeric}&var-drive_id=${__data.fields.drive_id.numeric}"
+                    "url": "/d/zm7wN6Zgz-fr/drive-details?from=${__data.fields.start_date_ts.numeric}&to=${__data.fields.end_date_ts.numeric}&var-car_id=${__data.fields.car_id.numeric}&var-drive_id=${__data.fields.drive_id.numeric}"
                   }
                 ]
               },
@@ -1925,7 +1925,7 @@
                   {
                     "targetBlank": false,
                     "title": "Voir les détails de charge",
-                    "url": "/d/BHhxFeZRz/charge-details?from=${__data.fields.start_date_ts.numeric}&to=${__data.fields.end_date_ts.numeric}&var-car_id=${__data.fields.car_id.numeric}&var-charging_process_id=${__data.fields.id.numeric:raw}"
+                    "url": "/d/BHhxFeZRz-fr/charge-details?from=${__data.fields.start_date_ts.numeric}&to=${__data.fields.end_date_ts.numeric}&var-car_id=${__data.fields.car_id.numeric}&var-charging_process_id=${__data.fields.id.numeric:raw}"
                   }
                 ]
               },

@@ -112,7 +112,7 @@
                   {
                     "targetBlank": true,
                     "title": "Voyage",
-                    "url": "/d/FkUpJpQZk/trip?from=${__data.fields.date_from}&to=${__data.fields.date_to}&var-car_id=$car_id"
+                    "url": "/d/FkUpJpQZk-fr/trip?from=${__data.fields.date_from}&to=${__data.fields.date_to}&var-car_id=$car_id"
                   }
                 ]
               },
@@ -188,7 +188,7 @@
                   {
                     "targetBlank": true,
                     "title": "Statistiques de charge",
-                    "url": "/d/-pkIkhmRz/charging-stats?from=${__data.fields.date_from}&to=${__data.fields.date_to}&var-car_id=$car_id"
+                    "url": "/d/-pkIkhmRz-fr/charging-stats?from=${__data.fields.date_from}&to=${__data.fields.date_to}&var-car_id=$car_id"
                   }
                 ]
               },
@@ -250,7 +250,7 @@
                   {
                     "targetBlank": true,
                     "title": "Charges",
-                    "url": "/d/TSmNYvRRk/charges?from=${__data.fields.date_from}&to=${__data.fields.date_to}&var-car_id=$car_id"
+                    "url": "/d/TSmNYvRRk-fr/charges?from=${__data.fields.date_from}&to=${__data.fields.date_to}&var-car_id=$car_id"
                   }
                 ]
               },
@@ -272,7 +272,7 @@
                   {
                     "targetBlank": true,
                     "title": "Trajets",
-                    "url": "/d/Y8upc6ZRk/drives?from=${__data.fields.date_from}&to=${__data.fields.date_to}&var-car_id=$car_id"
+                    "url": "/d/Y8upc6ZRk-fr/drives?from=${__data.fields.date_from}&to=${__data.fields.date_to}&var-car_id=$car_id"
                   }
                 ]
               },

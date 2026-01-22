@@ -309,7 +309,7 @@
         {
           "targetBlank": true,
           "title": "Statistiques de trajets",
-          "url": "/d/_7WkNSyWk/drive-stats"
+          "url": "/d/_7WkNSyWk-fr/drive-stats"
         }
       ],
       "options": {
@@ -836,7 +836,7 @@
         {
           "targetBlank": true,
           "title": "Statistiques de charge",
-          "url": "/d/-pkIkhmRz/charging-stats"
+          "url": "/d/-pkIkhmRz-fr/charging-stats"
         }
       ],
       "maxDataPoints": 100,
