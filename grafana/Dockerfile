@@ -35,3 +35,4 @@ COPY dashboards/*.json /dashboards/
 COPY dashboards/fr/*.json /dashboards_fr/
 
 EXPOSE 3000
+
