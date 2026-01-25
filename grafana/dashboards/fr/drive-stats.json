@@ -1494,7 +1494,8 @@
         "query": "select unit_of_length from settings limit 1;",
         "refresh": 1,
         "regex": "",
-        "type": "query"
+        "type": "query",
+        "label": "Unité de distance"
       },
       {
         "current": {},
@@ -1510,7 +1511,8 @@
         "query": "SELECT CASE WHEN '$length_unit' = 'km' THEN 'km/h' WHEN '$length_unit' = 'mi' THEN 'mph' END",
         "refresh": 1,
         "regex": "",
-        "type": "query"
+        "type": "query",
+        "label": "Unité de vitesse"
       },
       {
         "current": {},
@@ -1526,7 +1528,8 @@
         "query": "select preferred_range from settings limit 1;",
         "refresh": 1,
         "regex": "",
-        "type": "query"
+        "type": "query",
+        "label": "Autonomie préférée"
       },
       {
         "current": {},

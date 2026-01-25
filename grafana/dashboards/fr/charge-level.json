@@ -392,7 +392,8 @@
         "query": "select ((${__to:date:seconds} - ${__from:date:seconds}) / 86400 / $intervals_moving_average_percentiles)",
         "refresh": 2,
         "regex": "",
-        "type": "query"
+        "type": "query",
+        "label": "Jours moy. mobile"
       }
     ]
   },

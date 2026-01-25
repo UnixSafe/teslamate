@@ -771,7 +771,7 @@
           "color": "rgba(255,0,255,0.7)"
         },
         "filterValues": {
-          "le": 1e-09
+          "le": 1E-9
         },
         "legend": {
           "show": false
@@ -2372,7 +2372,8 @@
         "query": "select unit_of_length from settings limit 1;",
         "refresh": 1,
         "regex": "",
-        "type": "query"
+        "type": "query",
+        "label": "Unité de distance"
       },
       {
         "current": {},
@@ -2401,7 +2402,8 @@
         "query": "select preferred_range from settings limit 1;",
         "refresh": 1,
         "regex": "",
-        "type": "query"
+        "type": "query",
+        "label": "Autonomie préférée"
       }
     ]
   },

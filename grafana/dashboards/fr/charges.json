@@ -1371,7 +1371,8 @@
         "query": "select unit_of_length from settings limit 1;",
         "refresh": 1,
         "regex": "",
-        "type": "query"
+        "type": "query",
+        "label": "Unité de distance"
       },
       {
         "current": {},
@@ -1387,7 +1388,8 @@
         "query": "select unit_of_temperature from settings limit 1;",
         "refresh": 1,
         "regex": "",
-        "type": "query"
+        "type": "query",
+        "label": "Unité de température"
       },
       {
         "current": {},
@@ -1403,7 +1405,8 @@
         "query": "select preferred_range from settings limit 1;",
         "refresh": 1,
         "regex": "",
-        "type": "query"
+        "type": "query",
+        "label": "Autonomie préférée"
       },
       {
         "current": {},

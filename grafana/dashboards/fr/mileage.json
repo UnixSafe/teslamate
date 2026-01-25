@@ -250,7 +250,8 @@
         "query": "select unit_of_length from settings limit 1;",
         "refresh": 1,
         "regex": "",
-        "type": "query"
+        "type": "query",
+        "label": "Unité de distance"
       },
       {
         "current": {},
